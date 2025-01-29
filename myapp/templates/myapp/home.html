@@ -1,0 +1,21 @@
+{% extends 'myapp/base.html' %}
+{% block title %}Home - My Website{% endblock %}
+{%block content %}
+        <h1>Welcome to Django Templates, {{user_name}} !</h1>
+        <p>{{user_name|upper}}</p>
+        <p>{{user_name|lower}}</p>
+<!-- If Condition-->
+ {% if user_name == 'Chaouki' %}
+    <p>You're logged in as Chaouki!</p>
+ {% else %}
+    <p>Welcome, guest !</p>
+ {% endif %}
+
+<!-- For Loop -->
+<h2 class="frameworks-list-title">List of Most Used Python Frameworks and Libraries for Web Implementation</h2>
+<ul class="frameworks-list">
+    {% for item in items %}
+        <li class="framework-item">{{ item }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

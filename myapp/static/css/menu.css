@@ -1,0 +1,28 @@
+.menu {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.menu a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #575757;
+    color: #fff;
+}
+
+.menu a.active {
+    background-color: #4CAF50;
+    color: white;
+} 

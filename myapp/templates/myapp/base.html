@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>My Django App</h1>
+        {% include 'myapp/navbar.html' %}
+        {% include 'myapp/menu.html' %}
+    </header>
+    <div class="content-wrapper">
+        {% include 'myapp/sidebar.html' %}
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+    {% include 'myapp/footer.html' %}
+</body>
+</html>
